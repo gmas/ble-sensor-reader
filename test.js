@@ -29,7 +29,7 @@ function onDiscover(ble_uart) {
   setTimeout(function(){ 
     console.warn('calling Disconnect on ble_uart');
     ble_uart.disconnect(onConnect); 
-  }, 7000);
+  }, 5000);
 }
 
 //start discovery
@@ -38,4 +38,4 @@ nrfuart.discoverAll(onDiscover);
 setTimeout(function(){ 
   nrfuart.stopDiscoverAll(onDiscover); 
   process.exit(1);
-}, 10000);
+}, 8000);
